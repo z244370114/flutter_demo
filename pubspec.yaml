@@ -34,6 +34,11 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  json2dart_safe: ^1.0.8+9
+  common_utils: ^2.0.2
+  get: ^4.6.1
+  syncfusion_flutter_sliders: ^20.1.57
+  flutter_screenutil: ^5.0.0
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +50,10 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^1.0.0
+  fijkplayer: ^0.10.1
+#  flutter_rtmp_publisher: ^0.0.1
+#  flutter_rtmp: ^0.1.4
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -57,6 +66,10 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  assets:
+    - assets/
+    - assets/title_data.json
+    - assets/cure_data.json
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
