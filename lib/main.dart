@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'curve/curve_canvas.dart';
+import 'scrollbar/scrollbar_page.dart';
 import 'video/video_screen.dart';
 
 void main() {
@@ -117,6 +118,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     MaterialPageRoute(builder: (context) => CurveCanvas()));
               },
               child: const Text('跳转曲线图'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ScrollbarPage()));
+              },
+              child: const Text('跳转滚动条'),
             ),
           ],
         ),
