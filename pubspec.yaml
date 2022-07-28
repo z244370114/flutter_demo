@@ -53,7 +53,7 @@ dev_dependencies:
   fijkplayer: ^0.10.1
   vs_scrollbar: ^0.2.1
 #  flutter_rtmp_publisher: ^0.0.1
-#  flutter_rtmp: ^0.1.4
+  flutter_rtmp: ^0.1.4
 
 
 # For information on the generic Dart part of this file, see the
@@ -61,7 +61,12 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
+  fonts:
+    - family: SourceCodePro
+      fonts:
+        - asset: assets/fonts/static/SourceCodePro-Regular.ttf
+        - asset: assets/fonts/static/SourceCodePro-SemiBold.ttf
+          weight: 700
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

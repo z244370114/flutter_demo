@@ -39,7 +39,7 @@ class _ScrollbarPageState extends State<ScrollbarPage> {
               ),
             );
           },
-          itemCount: 30,
+          itemCount: 50,
           itemExtent: 50,
         ),
       ),
