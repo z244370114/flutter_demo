@@ -47,6 +47,7 @@ dependencies:
 #  flutter_rtmp_publisher: ^0.0.1
 #  flutter_rtmp: ^0.1.4
   chart_range_selector: ^1.0.0
+  flutter_bloc: ^8.1.1
 
 dev_dependencies:
   flutter_test:
