@@ -7,7 +7,7 @@ packages:
       name: async
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.8.1"
+    version: "2.8.2"
   boolean_selector:
     dependency: transitive
     description:
@@ -21,7 +21,7 @@ packages:
       name: characters
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.0"
+    version: "1.2.0"
   charcode:
     dependency: transitive
     description:
@@ -29,6 +29,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.1"
+  chart_range_selector:
+    dependency: "direct main"
+    description:
+      name: chart_range_selector
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   clock:
     dependency: transitive
     description:
@@ -42,7 +49,7 @@ packages:
       name: collection
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.15.0"
+    version: "1.16.0"
   common_utils:
     dependency: "direct main"
     description:
@@ -77,16 +84,23 @@ packages:
       name: decimal
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.2.0"
+    version: "2.3.0"
+  dio:
+    dependency: "direct main"
+    description:
+      name: dio
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.6"
   fake_async:
     dependency: transitive
     description:
       name: fake_async
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.2.0"
+    version: "1.3.0"
   fijkplayer:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: fijkplayer
       url: "https://pub.dartlang.org"
@@ -98,26 +112,19 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_lints:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_lints
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.4"
-  flutter_rtmp:
-    dependency: "direct dev"
-    description:
-      name: flutter_rtmp
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.1.4"
   flutter_screenutil:
     dependency: "direct main"
     description:
       name: flutter_screenutil
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.5.3+2"
+    version: "5.5.4"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -129,7 +136,14 @@ packages:
       name: get
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.6.1"
+    version: "4.6.5"
+  http_parser:
+    dependency: transitive
+    description:
+      name: http_parser
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "4.0.1"
   intl:
     dependency: transitive
     description:
@@ -143,7 +157,7 @@ packages:
       name: json2dart_safe
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.4.7"
+    version: "1.5.0"
   lints:
     dependency: transitive
     description:
@@ -151,13 +165,27 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.1"
+  logger:
+    dependency: "direct main"
+    description:
+      name: logger
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.0"
   matcher:
     dependency: transitive
     description:
       name: matcher
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.12.10"
+    version: "0.12.11"
+  material_color_utilities:
+    dependency: transitive
+    description:
+      name: material_color_utilities
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.4"
   meta:
     dependency: transitive
     description:
@@ -171,14 +199,7 @@ packages:
       name: path
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.8.0"
-  permission_handler:
-    dependency: transitive
-    description:
-      name: permission_handler
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "3.3.0"
+    version: "1.8.1"
   rational:
     dependency: transitive
     description:
@@ -197,7 +218,7 @@ packages:
       name: source_span
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.8.1"
+    version: "1.8.2"
   stack_trace:
     dependency: transitive
     description:
@@ -225,14 +246,14 @@ packages:
       name: syncfusion_flutter_core
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "20.2.40"
+    version: "20.2.49"
   syncfusion_flutter_sliders:
     dependency: "direct main"
     description:
       name: syncfusion_flutter_sliders
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "20.2.40"
+    version: "20.2.49"
   term_glyph:
     dependency: transitive
     description:
@@ -246,28 +267,28 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.2"
+    version: "0.4.9"
   typed_data:
     dependency: transitive
     description:
       name: typed_data
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.3.0"
+    version: "1.3.1"
   vector_math:
     dependency: transitive
     description:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.0"
+    version: "2.1.2"
   vs_scrollbar:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: vs_scrollbar
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.1"
 sdks:
-  dart: ">=2.14.0 <3.0.0"
+  dart: ">=2.17.1 <3.0.0"
   flutter: ">=1.17.0"

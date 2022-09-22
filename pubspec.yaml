@@ -39,6 +39,14 @@ dependencies:
   get: ^4.6.1
   syncfusion_flutter_sliders: ^20.1.57
   flutter_screenutil: ^5.0.0
+  dio: ^4.0.6
+  logger: ^1.1.0
+  flutter_lints: ^1.0.0
+  fijkplayer: ^0.10.1
+  vs_scrollbar: ^0.2.1
+#  flutter_rtmp_publisher: ^0.0.1
+#  flutter_rtmp: ^0.1.4
+  chart_range_selector: ^1.0.0
 
 dev_dependencies:
   flutter_test:
@@ -49,11 +57,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^1.0.0
-  fijkplayer: ^0.10.1
-  vs_scrollbar: ^0.2.1
-#  flutter_rtmp_publisher: ^0.0.1
-  flutter_rtmp: ^0.1.4
+
 
 
 # For information on the generic Dart part of this file, see the
