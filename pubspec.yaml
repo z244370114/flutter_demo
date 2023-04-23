@@ -42,7 +42,7 @@ dependencies:
   dio: ^4.0.6
   logger: ^1.1.0
   flutter_lints: ^1.0.0
-  fijkplayer: ^0.10.1
+#  fijkplayer: ^0.10.1
   vs_scrollbar: ^0.2.1
 #  flutter_rtmp_publisher: ^0.0.1
 #  flutter_rtmp: ^0.1.4

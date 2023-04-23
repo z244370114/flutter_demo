@@ -9,8 +9,8 @@ import 'scrollbar/scrollbar_page.dart';
 import 'video/video_screen.dart';
 
 void main() {
-  // runApp(const MyApp());
-  runApp(const BlocApp());
+  runApp(const MyApp());
+  // runApp(const BlocApp());
 }
 
 class MyApp extends StatelessWidget {

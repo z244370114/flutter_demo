@@ -53,7 +53,7 @@ class _PictureRecorderPageState extends State<PictureRecorderPage> {
             //     : Container(),
             Padding(
               padding: const EdgeInsets.all(12.0),
-              child: RaisedButton(
+              child: TextButton(
                   child: const Text('Generate image'),
                   onPressed: generateImage),
             ),

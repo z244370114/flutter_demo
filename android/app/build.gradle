@@ -66,4 +66,6 @@ flutter {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.aar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+//    implementation project(path: ':fijkplayer')
+
 }

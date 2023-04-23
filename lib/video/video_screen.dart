@@ -1,4 +1,4 @@
-import 'package:fijkplayer/fijkplayer.dart';
+// import 'package:fijkplayer/fijkplayer.dart';
 import 'package:flutter/material.dart';
 
 class VideoScreen extends StatefulWidget {
@@ -11,7 +11,7 @@ class VideoScreen extends StatefulWidget {
 }
 
 class _VideoScreenState extends State<VideoScreen> {
-  final FijkPlayer player = FijkPlayer();
+  // final FijkPlayer player = FijkPlayer();
 
   _VideoScreenState();
 
@@ -22,7 +22,7 @@ class _VideoScreenState extends State<VideoScreen> {
     // var url = 'http://192.168.0.34:8000/live/hxp.flv';
     // var url = 'rtmp://192.168.0.34:8086/live/zy';
     // player.setDataSource(url, autoPlay: true);
-    player.setDataSource(widget.url, autoPlay: true);
+    // player.setDataSource(widget.url, autoPlay: true);
     // player.setVolume(0.5);
   }
 
@@ -32,12 +32,12 @@ class _VideoScreenState extends State<VideoScreen> {
         appBar: AppBar(title: const Text("Fijkplayer Example")),
         body: Stack(
           children: [
-            Container(
-              alignment: Alignment.center,
-              child: FijkView(
-                player: player,
-              ),
-            ),
+            // Container(
+            //   alignment: Alignment.center,
+            //   child: FijkView(
+            //     player: player,
+            //   ),
+            // ),
             Positioned(
               bottom: 0,
               child: TextButton(
@@ -45,8 +45,8 @@ class _VideoScreenState extends State<VideoScreen> {
                   setState(() {
                     widget.url = 'http://192.168.0.34:8000/live/hxp.flv';
                   });
-                  player.release();
-                  player.setDataSource(widget.url, autoPlay: true);
+                  // player.release();
+                  // player.setDataSource(widget.url, autoPlay: true);
                 },
                 child: Text('http://192.168.0.34:8000/live/hxp.flv'),
               ),
@@ -57,8 +57,8 @@ class _VideoScreenState extends State<VideoScreen> {
                   widget.url =
                       'https://sample-videos.com/video123/flv/240/big_buck_bunny_240p_10mb.flv';
                 });
-                player.release();
-                player.setDataSource(widget.url, autoPlay: true);
+                // player.release();
+                // player.setDataSource(widget.url, autoPlay: true);
               },
               child: Text(
                   'https://sample-videos.com/video123/flv/240/big_buck_bunny_240p_10mb.flv'),
@@ -70,6 +70,6 @@ class _VideoScreenState extends State<VideoScreen> {
   @override
   void dispose() {
     super.dispose();
-    player.release();
+    // player.release();
   }
 }
