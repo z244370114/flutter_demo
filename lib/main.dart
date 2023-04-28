@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 import 'bloc/bloc_app.dart';
 import 'curve/curve_canvas.dart';
+import 'flex/FlexPage.dart';
 import 'picture_recorder/picture_recorder_page.dart';
 import 'scrollbar/scrollbar_page.dart';
 import 'video/video_screen.dart';
@@ -58,6 +59,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => FlexPage()));
+              },
+              child: const Text('FlexPage'),
+            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(context,
