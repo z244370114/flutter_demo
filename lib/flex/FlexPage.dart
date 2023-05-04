@@ -38,8 +38,13 @@ class _FlexPageState extends State<FlexPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('flex使用'),
+      ),
       body: Wrap(
-          children: Axis.values
+          // children: Axis.values
+          // children: MainAxisAlignment.values
+          children: CrossAxisAlignment.values
               .map((mode) => Column(children: <Widget>[
                     Container(
                         margin: const EdgeInsets.all(5),
@@ -53,8 +58,22 @@ class _FlexPageState extends State<FlexPage> {
     );
   }
 
+  // Widget _buildItem(mode) => Flex(
+  //       direction: mode,
+  //       children: <Widget>[blueBox, redBox, greenBox],
+  //     );
+
+  // Widget _buildItem(mode) => Flex(
+  //       direction: Axis.horizontal,
+  //       mainAxisAlignment: mode,
+  //       children: <Widget>[blueBox, redBox, greenBox],
+  //     );
+
   Widget _buildItem(mode) => Flex(
-        direction: mode,
+        direction: Axis.horizontal,
+        crossAxisAlignment: mode,
+        textBaseline: TextBaseline.alphabetic,
         children: <Widget>[blueBox, redBox, greenBox],
       );
+
 }
