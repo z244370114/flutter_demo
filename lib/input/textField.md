@@ -61,6 +61,10 @@
 |        border         |      边线相关       |
 |        enabled        |      是否禁用       |
 
+> label 效果图
+
+
+
 
 
 
