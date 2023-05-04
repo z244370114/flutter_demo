@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'bloc/bloc_app.dart';
 import 'curve/curve_canvas.dart';
 import 'flex/FlexPage.dart';
+import 'input/TextFieldPage.dart';
 import 'picture_recorder/picture_recorder_page.dart';
 import 'scrollbar/scrollbar_page.dart';
 import 'video/video_screen.dart';
@@ -15,8 +16,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -61,22 +62,35 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             ElevatedButton(
               onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const TextFieldPage()));
+              },
+              child: const Text('TextFieldPage'),
+            ),
+            ElevatedButton(
+              onPressed: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => FlexPage()));
+                    MaterialPageRoute(builder: (context) => const FlexPage()));
               },
               child: const Text('FlexPage'),
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CurveCanvas()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const CurveCanvas()));
               },
               child: const Text('跳转曲线图'),
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => ScrollbarPage()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ScrollbarPage()));
               },
               child: const Text('跳转滚动条'),
             ),
@@ -85,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => PictureRecorderPage()));
+                        builder: (context) => const PictureRecorderPage()));
               },
               child: const Text('PictureRecorderPage'),
             ),
