@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/scaffold/scaffold_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 import 'bloc/bloc_app.dart';
 import 'curve/curve_canvas.dart';
+import 'expanded/expanded_page.dart';
 import 'flex/FlexPage.dart';
 import 'input/TextFieldPage.dart';
 import 'picture_recorder/picture_recorder_page.dart';
@@ -60,6 +62,23 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ExpandedPage()));
+              },
+              child: const Text('ExpandedPage'),
+            ), ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ScaffoldPage()));
+              },
+              child: const Text('Scaffold'),
+            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(

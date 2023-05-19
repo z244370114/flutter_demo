@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -30,5 +31,15 @@ class ColorsUtils {
 
   static String colorToHex(Color color) {
     return color.toString().substring(10, 16);
+  }
+
+  static Color randomColor() {
+    Random random = Random();
+    return Color.fromRGBO(
+      random.nextInt(256),
+      random.nextInt(256),
+      random.nextInt(256),
+      1,
+    );
   }
 }
