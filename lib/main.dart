@@ -9,6 +9,7 @@ import 'expanded/expanded_page.dart';
 import 'flex/FlexPage.dart';
 import 'input/TextFieldPage.dart';
 import 'picture_recorder/picture_recorder_page.dart';
+import 'positioned/positioned_page.dart';
 import 'scrollbar/scrollbar_page.dart';
 import 'video/video_screen.dart';
 
@@ -67,10 +68,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
+                        builder: (context) => const PositionedPage()));
+              },
+              child: const Text('PositionedPage'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
                         builder: (context) => const ExpandedPage()));
               },
               child: const Text('ExpandedPage'),
-            ), ElevatedButton(
+            ),
+            ElevatedButton(
               onPressed: () {
                 Navigator.push(
                     context,

@@ -19,6 +19,7 @@ class _CurveCanvasState extends State<CurveCanvas> {
   late FracturingCurveCanvas1 fracturingCurveCanvas;
   late FracturingsModel fracturingsModel;
 
+
   @override
   void initState() {
     super.initState();
