@@ -48,6 +48,8 @@ dependencies:
 #  flutter_rtmp: ^0.1.4
   chart_range_selector: ^1.0.0
   flutter_bloc: ^8.1.1
+  flutter_markdown: ^0.6.15
+#  image_picker: ^0.8.8
 
 dev_dependencies:
   flutter_test:

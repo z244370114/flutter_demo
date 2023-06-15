@@ -8,6 +8,7 @@ import 'curve/curve_canvas.dart';
 import 'expanded/expanded_page.dart';
 import 'flex/FlexPage.dart';
 import 'input/TextFieldPage.dart';
+import 'markdown/markdown_page.dart';
 import 'picture_recorder/picture_recorder_page.dart';
 import 'positioned/positioned_page.dart';
 import 'scrollbar/scrollbar_page.dart';
@@ -63,6 +64,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const MarkdownPage()));
+              },
+              child: const Text('MarkdownPage'),
+            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
