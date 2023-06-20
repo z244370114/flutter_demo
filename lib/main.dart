@@ -14,6 +14,10 @@ import 'positioned/positioned_page.dart';
 import 'scrollbar/scrollbar_page.dart';
 import 'video/video_screen.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'view/login_page.dart';
+
 void main() {
   runApp(const MyApp());
   // runApp(const BlocApp());
@@ -24,14 +28,29 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
     return ScreenUtilInit(
       designSize: const Size(2000, 1200),
       builder: (BuildContext context, Widget? child) {
         return GetMaterialApp(
           title: 'Flutter Demo',
+          // localizationsDelegates: const [
+          //   AppLocalizations.localizationsDelegates, // Add this line
+          //   GlobalMaterialLocalizations.delegate,
+          //   GlobalWidgetsLocalizations.delegate,
+          //   GlobalCupertinoLocalizations.delegate,
+          // ],
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          supportedLocales: AppLocalizations.supportedLocales,
+          // supportedLocales: const [
+          //   Locale('en'), // English
+          //   Locale('es'), // Spanish
+          // ],
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
+          // home:  MyHomePage(title: AppLocalizations.of(context)!.helloWorld),
           home: const MyHomePage(title: 'Flutter Demo Home Page'),
         );
       },
@@ -64,6 +83,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const LoginPage()));
+              },
+              child: const Text('LoginPage'),
+            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(

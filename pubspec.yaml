@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -28,6 +28,8 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
+    sdk: flutter
+  flutter_localizations:
     sdk: flutter
 
 
@@ -49,7 +51,9 @@ dependencies:
   chart_range_selector: ^1.0.0
   flutter_bloc: ^8.1.1
   flutter_markdown: ^0.6.15
+  intl: ^0.18.0
 #  image_picker: ^0.8.8
+
 
 dev_dependencies:
   flutter_test:
@@ -77,6 +81,7 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
+  generate: true # Add this line
   uses-material-design: true
 
   assets:
