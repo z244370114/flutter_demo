@@ -29,6 +29,11 @@ class _NavigationRailsState extends State<NavigationRails> {
             },
             labelType: labelType,
             minExtendedWidth: 150,
+            indicatorColor: Colors.red,
+            indicatorShape:  RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10.0),
+              side: BorderSide(color: Colors.yellow, width: 2.0),
+            ),
             leading: showLeading
                 ? FloatingActionButton(
               elevation: 0,
