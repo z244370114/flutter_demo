@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_demo/scaffold/scaffold_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:youtube_video_info/youtube.dart';
 
 import 'bloc/bloc_app.dart';
 import 'curve/curve_canvas.dart';
+import 'customscrollview/custom_scroll_view.dart';
 import 'expanded/expanded_page.dart';
 import 'flex/FlexPage.dart';
 import 'input/TextFieldPage.dart';
@@ -14,6 +16,7 @@ import 'navigationrail/navigation_rail.dart';
 import 'picture_recorder/picture_recorder_page.dart';
 import 'positioned/positioned_page.dart';
 import 'scrollbar/scrollbar_page.dart';
+import 'tabs/tabs_page.dart';
 import 'video/video_screen.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -30,8 +33,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-
     return ScreenUtilInit(
       designSize: const Size(2000, 1200),
       builder: (BuildContext context, Widget? child) {
@@ -87,6 +88,23 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
+              onPressed: () async {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const CustomScrollViewPage()));
+              },
+              child: const Text('CustomScrollViewPage'),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                YoutubeDataModel videoData = await YoutubeData.getData(
+                    "https://www.youtube.com/watch?v=Ek1QD7AH9XQ");
+                print(videoData);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const TabsPage()));
+              },
+              child: const Text('TabsPage'),
+            ),
+            ElevatedButton(
               onPressed: () {
                 Navigator.push(
                     context,
@@ -106,10 +124,8 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const LoginPage()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const LoginPage()));
               },
               child: const Text('LoginPage'),
             ),

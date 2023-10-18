@@ -16,9 +16,9 @@ class _ScaffoldPageState extends State<ScaffoldPage> {
       ),
       body: Column(
         children: const [
-          Expanded(child: const Text('测试脚手架')),
-          const Text('测试脚手架'),
-          const Text('测试脚手架'),
+          Expanded(child: Text('测试脚手架')),
+          Text('测试脚手架'),
+          Text('测试脚手架'),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
