@@ -19,6 +19,8 @@
 |onEndDrawerChanged |  编辑完成  |
 |bottomNavigationBar     | 底部菜单组件 |
 |backgroundColor    |  背景色   |
+|persistentFooterButtons    |  背景色   |
+|resizeToAvoidBottomInset    |  如果脚手架上方显示屏幕键盘，则可以调整机身大小以避免与键盘重叠，从而防止机身内部的小部件被键盘遮挡。  |
 
 
 
