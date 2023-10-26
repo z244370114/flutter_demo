@@ -1,19 +1,17 @@
 # flutter_demo
 
-A new Flutter application.
+# Flutter版DeviceLibray
+[https://github.com/z244370114/devicesinfo](https://github.com/z244370114/devicesinfo "https://github.com/z244370114/devicesinfo")
 
-## Getting Started
+# 免费版 ChatGPT 地址
+[https://ai.firefix.cn](https://ai.firefix.cn "https://ai.firefix.cn")
 
-This project is a starting point for a Flutter application.
+# 免费版 多平台视频解析 地址
+[https://unwatermarker.cn/](https://unwatermarker.cn/ "https://unwatermarker.cn/")
 
-A few resources to get you started if this is your first Flutter project:
+# 免费版 多平台视频解析 APP下载地址
+[https://play.google.com/store/apps/details?id=com.tube.video.saver](https://play.google.com/store/apps/details?id=com.tube.video.saver "https://play.google.com/store/apps/details?id=com.tube.video.saver")
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 
 
 ## 常用开发框架
@@ -28,3 +26,5 @@ samples, guidance on mobile development, and a full API reference.
 8. Flutter Toast： 一个简单易用的 Toast 弹窗组件，帮助开发者在应用程序中显示提示信息和错误信息。
 9. Flutter SVG： 一个支持 SVG 图像渲染的 Flutter 插件，可以帮助开发者在应用程序中渲染矢量图形。
 10. Cached Network Image： 一个用于 Flutter 的图片缓存库，能够缓存网络图片并快速显示，可以提高应用程序的性能和用户体验。
+
+
