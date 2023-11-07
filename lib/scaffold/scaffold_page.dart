@@ -81,7 +81,7 @@ class _ScaffoldPageState extends State<ScaffoldPage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
-        persistentFooterAlignment:  AlignmentDirectional.bottomEnd,
+      persistentFooterAlignment: AlignmentDirectional.bottomEnd,
       persistentFooterButtons: [
         TextButton(
           onPressed: () {
