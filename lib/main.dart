@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:youtube_video_info/youtube.dart';
 
+import 'appbar/app_bar.dart';
 import 'bloc/bloc_app.dart';
 import 'curve/curve_canvas.dart';
 import 'customscrollview/custom_scroll_view.dart';
@@ -87,6 +88,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            ElevatedButton(
+              onPressed: () async {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const AppBarPage()));
+              },
+              child: const Text('AppBarPage'),
+            ),
             ElevatedButton(
               onPressed: () async {
                 Navigator.push(context,
