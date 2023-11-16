@@ -9,8 +9,9 @@
 # 免费版 多平台视频解析 地址
 [https://unwatermarker.cn/](https://unwatermarker.cn/ "https://unwatermarker.cn/")
 
-# 免费版 多平台视频解析 APP下载地址
-[https://play.google.com/store/apps/details?id=com.tube.video.saver](https://play.google.com/store/apps/details?id=com.tube.video.saver "https://play.google.com/store/apps/details?id=com.tube.video.saver")
+[//]: # (# 免费版 多平台视频解析 APP下载地址)
+
+[//]: # ([https://play.google.com/store/apps/details?id=com.tube.video.saver]&#40;https://play.google.com/store/apps/details?id=com.tube.video.saver "https://play.google.com/store/apps/details?id=com.tube.video.saver"&#41;)
 
 
 
