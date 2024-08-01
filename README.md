@@ -30,7 +30,7 @@
 
 ## 项目截图
 
-| ![]./assets/1.jpeg)	 | ![]./assets/2.jpeg)	  | ![]./assets/3.jpeg)   | ![]./assets/4.jpeg)	  | 
-|----------------------|-----------------------|-----------------------|-----------------------|
-| ![]./assets/5.jpeg)	 | ![]./assets/6.jpeg)	  | ![]./assets/7.jpeg)	  | ![]./assets/8.jpeg)	  | 	 	                                        
-| ![]./assets/9.jpeg)	 | ![]./assets/10.jpeg)	 | ![]./assets/11.jpeg)	 | ![]./assets/12.jpeg)	 | 	 	                                        
+| ![](./assets/1.jpg)	 | ![](./assets/2.jpg)	  | ![](./assets/3.jpg)   | ![](./assets/4.jpg)	  | 
+|-----------------------|------------------------|------------------------|------------------------|
+| ![](./assets/5.jpg)	 | ![](./assets/6.jpg)	  | ![](./assets/7.jpg)	  | ![](./assets/8.jpg)	  | 	 	                                        
+| ![](./assets/9.jpg)	 | ![](./assets/10.jpg)	 | ![](./assets/11.jpg)	 | ![](./assets/12.jpg)	 | 	 	                                        
