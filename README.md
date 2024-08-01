@@ -3,6 +3,15 @@
 # Flutter版DeviceLibray
 [https://github.com/z244370114/devicesinfo](https://github.com/z244370114/devicesinfo "https://github.com/z244370114/devicesinfo")
 
+
+## 项目截图
+
+| ![](./assets/1.jpg)	 | ![](./assets/2.jpg)	  | ![](./assets/3.jpg)   | ![](./assets/4.jpg)	  | 
+|-----------------------|------------------------|------------------------|------------------------|
+| ![](./assets/5.jpg)	 | ![](./assets/6.jpg)	  | ![](./assets/7.jpg)	  | ![](./assets/8.jpg)	  | 	 	                                        
+| ![](./assets/9.jpg)	 | ![](./assets/10.jpg)	 | ![](./assets/11.jpg)	 | ![](./assets/12.jpg)	 | 	 
+
+
 # 免费版 ChatGPT 地址
 [https://ai.firefix.cn](https://ai.firefix.cn "https://ai.firefix.cn")
 
@@ -28,9 +37,4 @@
 9. Flutter SVG： 一个支持 SVG 图像渲染的 Flutter 插件，可以帮助开发者在应用程序中渲染矢量图形。
 10. Cached Network Image： 一个用于 Flutter 的图片缓存库，能够缓存网络图片并快速显示，可以提高应用程序的性能和用户体验。
 
-## 项目截图
-
-| ![](./assets/1.jpg)	 | ![](./assets/2.jpg)	  | ![](./assets/3.jpg)   | ![](./assets/4.jpg)	  | 
-|-----------------------|------------------------|------------------------|------------------------|
-| ![](./assets/5.jpg)	 | ![](./assets/6.jpg)	  | ![](./assets/7.jpg)	  | ![](./assets/8.jpg)	  | 	 	                                        
-| ![](./assets/9.jpg)	 | ![](./assets/10.jpg)	 | ![](./assets/11.jpg)	 | ![](./assets/12.jpg)	 | 	 	                                        
+	                                        
