@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/drift/database.dart';
 import 'package:flutter_demo/scaffold/scaffold_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -8,6 +9,7 @@ import 'appbar/app_bar.dart';
 import 'bloc/bloc_app.dart';
 import 'curve/curve_canvas.dart';
 import 'customscrollview/custom_scroll_view.dart';
+import 'drift/drift_page.dart';
 import 'expanded/expanded_page.dart';
 import 'flex/FlexPage.dart';
 import 'input/TextFieldPage.dart';
@@ -25,6 +27,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'view/login_page.dart';
 
 void main() {
+  var put = Get.put(AppDatabase());
+  Get.find<AppDatabase>();
   runApp(const MyApp());
   // runApp(const BlocApp());
 }
@@ -89,6 +93,13 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              ElevatedButton(
+                onPressed: () async {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const DriftPage()));
+                },
+                child: const Text('DriftPage'),
+              ),
               ElevatedButton(
                 onPressed: () async {
                   Navigator.push(context,

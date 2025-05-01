@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.17.0 <3.0.0"
+  sdk: ^3.6.0
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -38,7 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   json2dart_safe: ^1.0.8+9
   common_utils: ^2.0.2
-  get: ^4.6.1
+  get: ^4.7.2
   syncfusion_flutter_sliders: ^20.1.57
   flutter_screenutil: ^5.9.3
   dio: ^4.0.6
@@ -52,10 +52,15 @@ dependencies:
   chart_range_selector: ^1.0.0
   flutter_bloc: ^8.1.1
   flutter_markdown: ^0.6.15
-  intl: ^0.18.0
+  intl: ^0.19.0
   youtube_video_info: ^1.0.2
 #  image_picker: ^0.8.8
 
+  #  数据库
+  drift: ^2.26.0
+  drift_flutter: ^0.2.4
+  path_provider: ^2.1.5
+  path: ^1.9.0
 
 
 dev_dependencies:
@@ -68,6 +73,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
 
+  drift_dev: ^2.26.0
+  build_runner: ^2.4.15
 
 
 # For information on the generic Dart part of this file, see the
