@@ -1,6 +1,10 @@
+import 'dart:async';
+
 import 'package:drift/drift.dart' as drift;
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/drift/database.dart';
+
+import 'todos_items_dao.dart';
 
 class DriftPage extends StatefulWidget {
   const DriftPage({Key? key}) : super(key: key);
@@ -16,10 +20,18 @@ class _DriftPageState extends State<DriftPage> {
   late $AppDatabaseManager managers;
   List<TodoItem> onValue = [];
 
+  late TodoItemsDao dao;
+  final StreamController<TodoItem> _todoStreamController =
+      StreamController<TodoItem>();
+
+  Stream<TodoItem>? get stream => _todoStreamController.stream;
+
   @override
   void initState() {
     super.initState();
     appDatabase = AppDatabase();
+    dao = TodoItemsDao(appDatabase);
+
     managers = appDatabase.managers;
   }
 
@@ -31,34 +43,91 @@ class _DriftPageState extends State<DriftPage> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          child: Column(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ElevatedButton(
-                onPressed: () async {
-                  createTodoItem();
-                },
-                child: const Text('插入 insert'),
+              Column(
+                children: [
+                  ElevatedButton(
+                    onPressed: () async {
+                      createTodoItem();
+                    },
+                    child: const Text('插入 insert'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () async {
+                      selectTodoItems();
+                    },
+                    child: const Text('查询 select'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () async {
+                      updateTodoItems();
+                      setState(() {});
+                    },
+                    child: const Text('更新 update'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () async {
+                      deleteTodoItems();
+                    },
+                    child: const Text('删除 delete'),
+                  ),
+                  listWidget(onValue)
+                ],
               ),
-              ElevatedButton(
-                onPressed: () async {
-                  selectTodoItems();
-                },
-                child: const Text('查询 select'),
+              Column(
+                children: [
+                  ElevatedButton(
+                    onPressed: () async {
+                      var limitTodos = await dao.limitTodos(10, offset: 10);
+                      setState(() {
+                        print(limitTodos);
+                        onValue = limitTodos;
+                      });
+                    },
+                    child: const Text('查询 limit'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () async {
+                      var limitTodos = await dao.sortEntriesAlphabetically();
+                      setState(() {
+                        print(limitTodos);
+                        onValue = limitTodos;
+                      });
+                    },
+                    child: const Text('排序 '),
+                  ),
+                  ElevatedButton(
+                    onPressed: () async {
+                      dao.entryById(20);
+                      setState(() {});
+                    },
+                    child: const Text('单一  '),
+                  ),
+                  ElevatedButton(
+                    onPressed: () async {
+                      var pageOfTodos = dao.pageOfTodos(10);
+                      var limitTodos = await pageOfTodos.get();
+                      setState(() {
+                        onValue = limitTodos;
+                      });
+                    },
+                    child: const Text('MultiSelectable  '),
+                  ),
+                  StreamBuilder<TodoItem>(
+                    stream: dao.entryById(20),
+                    builder: (context, snapshot) {
+                      print(snapshot.data);
+                      return SizedBox(
+                        child: Text(""),
+                        height: 50,
+                      );
+                    },
+                  ),
+                ],
               ),
-              ElevatedButton(
-                onPressed: () async {
-                  updateTodoItems();
-                  setState(() {});
-                },
-                child: const Text('更新 update'),
-              ),
-              ElevatedButton(
-                onPressed: () async {
-                  deleteTodoItems();
-                },
-                child: const Text('删除 delete'),
-              ),
-              listWidget(onValue)
             ],
           ),
         ),
@@ -120,19 +189,19 @@ class _DriftPageState extends State<DriftPage> {
   Future<void> createTodoItem() async {
     // Create a new item
     await managers.todoItems
-        .create((o) => o(title: 'Title', content: 'Content'));
+        .create((o) => o(title: 'aTitle', content: 'Content'));
 
     // We can also use `mode` and `onConflict` parameters, just
     // like in the `[InsertStatement.insert]` method on the table
     await managers.todoItems.create(
-        (o) => o(title: 'Title', content: 'New Content'),
+        (o) => o(title: 'dTitle', content: 'New Content'),
         mode: drift.InsertMode.replace);
 
     // We can also create multiple items at once
     await managers.todoItems.bulkCreate(
       (o) => [
-        o(title: 'Title 1', content: 'Content 1'),
-        o(title: 'Title 2', content: 'Content 2'),
+        o(title: 'cTitle 1', content: 'Content 1'),
+        o(title: 'fTitle 2', content: 'Content 2'),
       ],
     );
     setState(() {});
@@ -147,6 +216,5 @@ class _DriftPageState extends State<DriftPage> {
     });
     // Delete a single item
     await managers.todoItems.filter((f) => f.id(5)).delete();
-
   }
 }
