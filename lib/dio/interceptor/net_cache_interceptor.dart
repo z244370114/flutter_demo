@@ -29,9 +29,9 @@
 //
 //   @override
 //   void onRequest(
-//       RequestOptions options,
-//       RequestInterceptorHandler requestCb,
-//       ) async {
+//     RequestOptions options,
+//     RequestInterceptorHandler requestCb,
+//   ) async {
 //     if (!CACHE_ENABLE) {
 //       return super.onRequest(options, requestCb);
 //     }
@@ -126,4 +126,3 @@
 //     cache.remove(key);
 //   }
 // }
-//

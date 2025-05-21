@@ -39,9 +39,10 @@ dependencies:
   json2dart_safe: ^1.0.8+9
   common_utils: ^2.0.2
   get: ^4.7.2
-  syncfusion_flutter_sliders: ^20.1.57
+  syncfusion_flutter_sliders: ^29.2.4
   flutter_screenutil: ^5.9.3
-  dio: ^4.0.6
+  dio: ^5.8.0+1
+  dio_cache_interceptor: ^4.0.3
   logger: ^1.1.0
   flutter_lints: ^1.0.0
 #  fijkplayer: ^0.10.1
@@ -52,15 +53,18 @@ dependencies:
   chart_range_selector: ^1.0.0
   flutter_bloc: ^8.1.1
   flutter_markdown: ^0.6.15
-  intl: ^0.19.0
+  intl: ^0.20.2
   youtube_video_info: ^1.0.2
 #  image_picker: ^0.8.8
+
+  docx_template: ^0.4.0
 
   #  数据库
   drift: ^2.26.0
   drift_flutter: ^0.2.4
   path_provider: ^2.1.5
   path: ^1.9.0
+  webview_flutter: ^4.12.0
 
 
 dev_dependencies:
@@ -98,6 +102,10 @@ flutter:
     - assets/
     - assets/title_data.json
     - assets/cure_data.json
+    - assets/www/index.html
+    - assets/www/test.html
+    - assets/www/anxiety_relief.html
+    - assets/www/styles/style.css
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

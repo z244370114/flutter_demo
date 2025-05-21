@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/drift/database.dart';
 import 'package:flutter_demo/scaffold/scaffold_page.dart';
+import 'package:flutter_demo/webview/web_view.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:youtube_video_info/youtube.dart';
@@ -13,6 +14,7 @@ import 'drift/drift_page.dart';
 import 'expanded/expanded_page.dart';
 import 'flex/FlexPage.dart';
 import 'input/TextFieldPage.dart';
+import 'l10n/app_localizations.dart';
 import 'markdown/markdown_page.dart';
 import 'navigationbar/navigation_bar.dart';
 import 'navigationrail/navigation_rail.dart';
@@ -21,8 +23,6 @@ import 'positioned/positioned_page.dart';
 import 'scrollbar/scrollbar_page.dart';
 import 'tabs/tabs_page.dart';
 import 'video/video_screen.dart';
-
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'view/login_page.dart';
 
@@ -93,6 +93,13 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              ElevatedButton(
+                onPressed: () async {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const WebViewPage()));
+                },
+                child: const Text('WebViewPage'),
+              ),
               ElevatedButton(
                 onPressed: () async {
                   Navigator.push(context,

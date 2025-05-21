@@ -16,15 +16,13 @@ class DioUtils {
 
   DioUtils._internal() {
     BaseOptions options = BaseOptions(
-        connectTimeout: 5 * 1000,
-        receiveTimeout: 3 * 1000,
-        sendTimeout: 10 * 1000,
-        baseUrl: Api.baseUrl,
-        responseType: ResponseType.plain,
-        headers: {
-          '': '',
-          '': '',
-        });
+      connectTimeout: const Duration(milliseconds: 5 * 1000),
+      receiveTimeout: const Duration(milliseconds: 3 * 1000),
+      sendTimeout: const Duration(milliseconds: 10 * 1000),
+      baseUrl: Api.baseUrl,
+      responseType: ResponseType.plain,
+      headers: {'': '', '': ''},
+    );
     dio.options = options;
     // dio.interceptors.add(LogInterceptor());
     // (dio.httpClientAdapter as DefaultHttpClientAdapter).onHttpClientCreate =
@@ -55,5 +53,4 @@ class DioUtils {
 void main() async {
   var future = DioUtils.instance.get('article/list/0/json');
   print(future.toString());
-
 }

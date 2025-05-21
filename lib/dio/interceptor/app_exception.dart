@@ -6,17 +6,17 @@ class AppException implements Exception {
 
   AppException(this.code, this.msg);
 
-  factory AppException.create(DioError err) {
+  factory AppException.create(DioException err) {
     switch (err.type) {
-      case DioErrorType.cancel:
+      case DioExceptionType.cancel:
         return AppException(-1, '取消请求');
-      case DioErrorType.connectTimeout:
+      case DioExceptionType.connectionTimeout:
         return AppException(-1, '连接超时');
-      case DioErrorType.sendTimeout:
+      case DioExceptionType.sendTimeout:
         return AppException(-1, '请求超时');
-      case DioErrorType.receiveTimeout:
+      case DioExceptionType.receiveTimeout:
         return AppException(-1, '响应超时');
-      case DioErrorType.response:
+      case DioExceptionType.badResponse:
         int errCode = err.response!.statusCode!;
         switch (errCode) {
           case 400:
@@ -41,7 +41,7 @@ class AppException implements Exception {
             return AppException(errCode, err.response!.statusMessage!);
         }
       default:
-        return AppException(-1, err.error.message);
+        return AppException(-1, err.message ?? '未知错误');
     }
   }
 }

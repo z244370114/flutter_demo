@@ -16,7 +16,7 @@ class RequestInterceptor extends Interceptor {
   void onResponse(Response response, ResponseInterceptorHandler handler) {}
 
   @override
-  void onError(DioError err, ErrorInterceptorHandler handler) {
+  void onError(DioException err, ErrorInterceptorHandler handler) {
     // if (err.type == DioErrorType.other) {
     //   bool isConnectNetWork = await isConnected();
     //   if (!isConnectNetWork && err.error is MyDioSocketException) {
@@ -24,7 +24,7 @@ class RequestInterceptor extends Interceptor {
     //   }
     // }
     AppException appException = AppException.create(err);
-    err.error = appException;
+    // err.error = appException;
     return super.onError(err, handler);
   }
 }
