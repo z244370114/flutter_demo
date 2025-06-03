@@ -66,6 +66,8 @@ dependencies:
   path: ^1.9.0
   webview_flutter: ^4.12.0
 
+  flutter_unionad: ^2.1.8
+
 
 dev_dependencies:
   flutter_test:

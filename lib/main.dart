@@ -6,6 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:youtube_video_info/youtube.dart';
 
+import 'ads/ad_page.dart';
+import 'ads/ad_utils.dart';
 import 'appbar/app_bar.dart';
 import 'bloc/bloc_app.dart';
 import 'curve/curve_canvas.dart';
@@ -77,6 +79,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,6 +103,13 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              ElevatedButton(
+                onPressed: () async {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const AdPage()));
+                },
+                child: const Text('AdPage'),
+              ),
               ElevatedButton(
                 onPressed: () async {
                   Navigator.push(context,

@@ -32,7 +32,7 @@ if (flutterVersionName == null) {
 //apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 android {
-    namespace = "com.flutter_demo"
+    namespace "com.cg.driver.exam.ddt"
     compileSdkVersion 35
 
     compileOptions {
@@ -50,11 +50,26 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.flutter_demo"
-        minSdkVersion 21
+        applicationId "com.cg.driver.exam.ddt"
+        minSdkVersion 24
         targetSdkVersion 35
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+    }
+
+    signingConfigs {
+        release {
+            keyAlias "ddt"
+            keyPassword "123456"
+            storeFile file("../ddt.jks")
+            storePassword "123456"
+        }
+        debug {
+            keyAlias "ddt"
+            keyPassword "123456"
+            storeFile file("../ddt.jks")
+            storePassword "123456"
+        }
     }
 
     buildTypes {
@@ -64,6 +79,8 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+
 }
 
 flutter {

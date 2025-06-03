@@ -21,7 +21,10 @@ class DioUtils {
       sendTimeout: const Duration(milliseconds: 10 * 1000),
       baseUrl: Api.baseUrl,
       responseType: ResponseType.plain,
-      headers: {'': '', '': ''},
+      headers: {
+        '': '',
+        '': '',
+      },
     );
     dio.options = options;
     // dio.interceptors.add(LogInterceptor());
@@ -52,5 +55,7 @@ class DioUtils {
 
 void main() async {
   var future = DioUtils.instance.get('article/list/0/json');
-  print(future.toString());
+  future.then((onValue) {
+    print(onValue.message);
+  });
 }
