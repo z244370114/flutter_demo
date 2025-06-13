@@ -111,7 +111,6 @@ flutter:
     - assets/
     - assets/title_data.json
     - assets/cure_data.json
-    - assets/driver.db
     - assets/www/index.html
     - assets/www/test.html
     - assets/www/anxiety_relief.html
