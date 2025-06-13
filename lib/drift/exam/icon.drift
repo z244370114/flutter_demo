@@ -1,0 +1,8 @@
+CREATE TABLE exam_icon_group (
+	id	INTEGER NOT NULL UNIQUE,
+	name	TEXT NOT NULL,
+	total	INTEGER NOT NULL,
+	sort	INTEGER NOT NULL,
+	cover	TEXT, step INTEGER,
+	PRIMARY KEY("id" AUTOINCREMENT)
+);

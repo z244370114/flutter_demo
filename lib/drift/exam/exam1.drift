@@ -1,0 +1,49 @@
+-- exam 表
+CREATE TABLE exam (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  character TEXT,
+  q_type INTEGER NOT NULL,
+  q_type_tag TEXT,
+  q_detail_tag TEXT,
+  q_konw_tag TEXT,
+  q_zone TEXT,
+  q_content TEXT,
+  q_img1 TEXT,
+  q_img2 TEXT,
+  q_opt TEXT,
+  q_answer TEXT,
+  q_point TEXT,
+  q_quickly_rem INTEGER NOT NULL,
+  q_skills INTEGER,
+  q_answer_detail INTEGER,
+  q_answer_status INTEGER NOT NULL DEFAULT 1,
+  q_change_date INTEGER,
+  q_collection_status INTEGER DEFAULT 0,
+  q_done_status INTEGER DEFAULT 1,
+  is_visible INTEGER DEFAULT 1,
+  sort INTEGER NOT NULL DEFAULT 0
+);
+
+-- exam_500 表
+CREATE TABLE exam_500 (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  character TEXT,
+  q_type INTEGER NOT NULL,
+  q_type_tag TEXT,
+  q_detail_tag TEXT,
+  q_konw_tag TEXT,
+  q_zone TEXT,
+  q_content TEXT,
+  q_img1 TEXT,
+  q_img2 TEXT,
+  q_opt TEXT,
+  q_answer TEXT,
+  q_point TEXT,
+  q_quickly_rem INTEGER NOT NULL,
+  q_skills INTEGER,
+  q_answer_detail INTEGER,
+  q_answer_status INTEGER NOT NULL DEFAULT 1,
+  q_collection_status INTEGER DEFAULT 0,
+  step INTEGER,
+  sort INTEGER NOT NULL DEFAULT 0
+);

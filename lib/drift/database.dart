@@ -7,8 +7,8 @@ import 'tables.dart';
 part 'database.g.dart';
 
 @DriftDatabase(
-  tables: [TodoItems],
-//     include: {'sql.drift'}
+  // tables: [TodoItems],
+    include: {'exam1.drift','icon.drift'}
 )
 class AppDatabase extends _$AppDatabase {
   // After generating code, this class needs to define a `schemaVersion` getter

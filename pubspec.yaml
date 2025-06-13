@@ -68,6 +68,13 @@ dependencies:
 
   flutter_unionad: ^2.1.8
 
+  google_ml_kit: ^0.20.0
+  camera: ^0.11.1
+  camera_android: ^0.10.10+1
+  image_picker: ^1.1.2
+
+  flutter_blue_plus: ^1.35.5
+
 
 dev_dependencies:
   flutter_test:
@@ -104,6 +111,7 @@ flutter:
     - assets/
     - assets/title_data.json
     - assets/cure_data.json
+    - assets/driver.db
     - assets/www/index.html
     - assets/www/test.html
     - assets/www/anxiety_relief.html
