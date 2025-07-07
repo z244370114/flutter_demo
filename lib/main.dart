@@ -14,6 +14,7 @@ import 'blue/blue_page.dart';
 import 'curve/curve_canvas.dart';
 import 'customscrollview/custom_scroll_view.dart';
 import 'drift/drift_page.dart';
+import 'encrypt/encrypt_page.dart';
 import 'expanded/expanded_page.dart';
 import 'flex/FlexPage.dart';
 import 'google_mlkit/barcode_scanner_view.dart';
@@ -108,6 +109,13 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                ElevatedButton(
+                  onPressed: () async {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) =>  EncryptPage()));
+                  },
+                  child: const Text('EncryptPage'),
+                ),
                 ElevatedButton(
                   onPressed: () async {
                     Navigator.push(context,

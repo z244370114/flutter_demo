@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_demo/ads/splash_page.dart';
+// import 'package:flutter_demo/ads/splash_page.dart';
 
 import 'ad_utils.dart';
 
@@ -99,15 +99,15 @@ class _AdPageState extends State<AdPage> {
               ),
               bannerAdView ??
                   Text("banner广告占位"),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SplashPage()));
-                },
-                child: const Text('加载开屏广告'),
-              ),
+              // ElevatedButton(
+              //   onPressed: () {
+              //     Navigator.push(
+              //         context,
+              //         MaterialPageRoute(
+              //             builder: (context) => const SplashPage()));
+              //   },
+              //   child: const Text('加载开屏广告'),
+              // ),
             ],
           ),
         ],
