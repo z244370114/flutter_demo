@@ -31,7 +31,8 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-
+  meishu:
+    path: ./plugins/meishu
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -66,7 +67,7 @@ dependencies:
   path: ^1.9.0
   webview_flutter: ^4.12.0
 
-  flutter_unionad: ^2.1.8
+  flutter_unionad: ^2.1.12
 
   google_ml_kit: ^0.20.0
   camera: ^0.11.1
@@ -75,6 +76,18 @@ dependencies:
 
   flutter_blue_plus: ^1.35.5
 
+  encrypt: ^5.0.3
+
+  crypto: ^3.0.6
+
+  visibility_detector: ^0.4.0+2
+  
+  sign_in_with_apple: ^7.0.1
+
+  flutter_native_splash: ^2.4.6
+
+dependency_overrides:
+  archive: ^4.0.2
 
 dev_dependencies:
   flutter_test:
@@ -111,6 +124,7 @@ flutter:
     - assets/
     - assets/title_data.json
     - assets/cure_data.json
+    - assets/driver.db
     - assets/www/index.html
     - assets/www/test.html
     - assets/www/anxiety_relief.html
