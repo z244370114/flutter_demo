@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/drift/database.dart';
+import 'package:flutter_demo/printing/printing_page.dart';
 import 'package:flutter_demo/scaffold/scaffold_page.dart';
 import 'package:flutter_demo/webview/web_view.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -109,6 +110,13 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                ElevatedButton(
+                  onPressed: () async {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) =>  PrintingPage()));
+                  },
+                  child: const Text('printing'),
+                ),
                 ElevatedButton(
                   onPressed: () async {
                     Navigator.push(context,
