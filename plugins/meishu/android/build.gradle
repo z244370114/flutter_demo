@@ -1,0 +1,84 @@
+group = "com.ad.meishu"
+version = "1.0-SNAPSHOT"
+
+buildscript {
+    ext.kotlin_version = "2.1.0"
+    repositories {
+        google()
+        mavenCentral()
+        flatDir { dirs 'libs' }
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.7.3")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        flatDir { dirs 'libs' }
+    }
+}
+
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+
+android {
+    namespace = "com.ad.meishu"
+
+    compileSdk = 35
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11
+    }
+
+    sourceSets {
+        main.java.srcDirs += "src/main/kotlin"
+        test.java.srcDirs += "src/test/kotlin"
+    }
+
+    defaultConfig {
+        minSdk = 21
+    }
+
+    dependencies {
+        testImplementation("org.jetbrains.kotlin:kotlin-test")
+        testImplementation("org.mockito:mockito-core:5.17.0")
+
+        //添加依赖
+//        implementation files('libs/ms-sdk_2.5.6.4_release.aar')
+//        implementation files('libs/Baidu_MobAds_SDK-release_v9.3912.aar')
+//        implementation files('libs/GDTSDK.unionNormal.4.640.1510.aar')
+//        implementation files('libs/open_ad_sdk_6.8.1.7.aar')
+        //添加依赖
+        implementation(name: 'ms-sdk_2.5.6.4_release', ext: 'aar')
+        implementation(name: 'Baidu_MobAds_SDK-release_v9.3912', ext: 'aar')
+        implementation(name: 'GDTSDK.unionNormal.4.640.1510', ext: 'aar')
+        implementation(name: 'open_ad_sdk_6.8.1.7', ext: 'aar')
+
+        implementation 'androidx.cardview:cardview:1.0.0'
+        implementation 'com.google.code.gson:gson:2.8.5'
+        implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+
+    }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+
+            testLogging {
+                events "passed", "skipped", "failed", "standardOut", "standardError"
+                outputs.upToDateWhen { false }
+                showStandardStreams = true
+            }
+        }
+    }
+}

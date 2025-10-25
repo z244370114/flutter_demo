@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 这个下载路径也不可以修改，必须为com_qq_e_download -->
+    <external-cache-path
+        name="gdt_sdk_download_path"
+        path="com_qq_e_download" />
+    <external-cache-path
+        name="gdt_sdk_download_path1"
+        path="com_qq_e_download" />
+    <cache-path
+        name="gdt_sdk_download_path2"
+        path="com_qq_e_download" />
+    <root-path
+        name="root"
+        path="." />
+    <cache-path
+        name="cache"
+        path="." />
+    <external-path
+        name="external"
+        path="." />
+    <external-cache-path
+        name="external_cache_path"
+        path="." />
+    <external-path
+        name="external_files"
+        path="."/>
+    <external-path path="mimoDownload" name="files_root" />
+    <external-path path="." name="external_storage_root" />
+</paths>

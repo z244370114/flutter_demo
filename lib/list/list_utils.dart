@@ -1,4 +1,4 @@
-import 'package:smart_device_info/smart_device_info.dart';
+// import 'package:smart_device_info/smart_device_info.dart';
 
 class ListUtils {
   static List<int> leftList = [1, 2, 3, 4, 5, 6];
@@ -8,7 +8,7 @@ class ListUtils {
     leftList.insert(0, 0);
     print(leftList.toString());
 
-     SmartDeviceInfo.instance.getDeviceInfo();
+     // SmartDeviceInfo.instance.getDeviceInfo();
     //[0, 1, 2, 3, 4, 5, 6]
   }
 
