@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
@@ -65,7 +64,7 @@ class _PrintingPageState extends State<PrintingPage> {
   }
 
   Future<Uint8List> _generatePdf(PdfPageFormat format,pw.Font chineseFont, String title) async {
-    final pdf = pw.Document(version: PdfVersion.pdf_1_5, compress: true);
+    final pdf = pw.Document(version: PdfVersion.pdf_1_4, compress: true);
 
     pdf.addPage(
       pw.Page(
